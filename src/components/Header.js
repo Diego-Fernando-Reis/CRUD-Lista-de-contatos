@@ -16,23 +16,25 @@ const Header = () =>{
     }
   }, [location])
 
+   
+
   return(
     <div className='header'>
-      <p className='logo'>Contact App</p>
+      <span className='logo'>Lista de contato</span>
       <div className='header-right'>
         <Link to='/'>
           <p className={`${activeTab === 'Home' ? 'active' : ''}`} onClick={() => setActiveTab('Home')}>
-            Home
+            <i>Home</i>
           </p>
         </Link>
         <Link to='/add'>
           <p className={`${activeTab === 'AddContact' ? 'active' : ''}`} onClick={() => setActiveTab('AddContact')}>
-            Add Contact
+            <i>Adicionar</i>
           </p>
         </Link>
         <Link to='/about'>
           <p className={`${activeTab === 'About' ? 'active' : ''}`} onClick={() => setActiveTab('About')}>
-            About
+            <i>Sobre</i>
           </p>
         </Link>
       </div>
